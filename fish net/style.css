@@ -1,0 +1,486 @@
+/* Global Styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-family: 'Numito', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+ul{
+    list-style: none;
+
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #fafafa;
+    width: 100%;
+}
+
+section{
+    padding: 5rem 0;
+}
+
+
+
+/* header */
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container{
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255,.2);
+}
+
+.nav-brand{
+    width: 2rem;
+}
+
+.menu-icons i{
+    font-size: 3.5rem;
+    color: #fafafa;
+    cursor: pointer;
+}
+
+.close i{
+    color: #eb648c;
+}
+
+.nav-list{
+    width: 25rem;
+    height: 100vh;
+    background-color:#d16082;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out; 
+}
+
+.nav-list.active{
+    right: 0;
+}
+
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.nav-item{
+    margin: 1.5rem 0;
+    
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color:#ffff;
+}
+
+/* Hero */
+.hero{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(to right bottom,rgba(116, 187, 1, 0.678) 0% ,rgba(154, 235, 108, 0.8) 100% ) ,url(Images/fishnet3.jpg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.main-message{
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    /* text-transform: uppercase; */
+    transform: translateY(30%);
+    margin-top: 10rem;
+
+}
+
+.main-message h1{
+    font-size: 4rem;
+    font-family: 'Aldrich', 'sans-serif';
+    margin: 1rem 0;
+
+}
+
+.main-message h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.main-message p{
+    text-transform: lowercase;
+    font-size: 1.4rem;
+    line-height: 1.85rem;
+    
+}
+
+.btn{
+    background-color: #eb648c;
+    color: #fafafa;
+    border-radius: 2rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    transition: background-color 650ms;
+
+}
+.btn:hover{
+    background-color: #ee507f;
+}
+
+/* Our Farmers Coummunity */
+.our-farmers-local{
+    padding: 0;
+}
+.tittle-heading{
+    text-align: center;
+    margin-bottom: 10rem;
+    color: rgba(0,0,0,.7);
+    margin-top: 4rem;
+    /* text-transform: uppercase; */
+    /* line-height: 1.8rem; */
+}
+
+.tittle-heading h1{
+    font-family:'Aldrich' 'sans-serif';
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+    
+}
+
+.tittle-heading h3{
+    font-size: 1.6rem;
+}
+
+.tittle-heading p{
+    font-size: 1.4rem;
+    /* text-transform: lowercase; */
+}
+
+.farmers-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.farmers-grid-item{
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.farmers-grid-item::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right bottom,rgba(116, 187, 1, 0.678) 0% ,rgba(154, 235, 108, 0.8) 100% );
+    z-index: -1;
+}
+
+.farm-gazing{
+    background: url("images/fishnet4.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.local-lead{
+    background: url("images/fishnet5.png") center no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.farmers{
+    background: url("images/fishnet6.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.farmers-grid-item i{
+    font-size:4rem ;
+    color: #d65b80;
+}
+
+.farmers-grid-item h1{
+    font-family: 'Aldrich', sans-serif;
+    font-size: 1.7rem;
+    margin: 2rem 0;
+}
+
+
+/* Testimonials */
+
+.testimonial-approach{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    background-color: #fafafa;
+    margin-top: 7rem;
+    background-attachment: fixed;
+    
+
+}
+
+.image-section{
+    position:relative;
+    background-image:linear-gradient(to right bottom,rgba(116, 187, 1, 0.678) 0% ,rgba(154, 235, 108, 0.8) 100% ),url(Images/fishnet1.jpg);
+    background-size: cover;
+    background-position: top;
+    top: 0;
+    left: 0;
+    height: 75vh;
+    width: 100%;
+ } 
+
+.paragraph-about i{
+    color: #ee507f;
+    font-size: 1.8rem;
+}
+
+.paragraph-about p{
+    color:rgba(0,0,0,.7);
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    width: 75%;
+    margin-left: 2.5rem;
+}
+.bold{
+    color: #d65b80;
+    font-weight: bold;
+}
+.paragraph-about .cta{
+    margin-top: 1rem ;
+    margin-left: 2.5rem;
+}
+
+.button-blue{
+    background-color: #eb648c;
+    color: #fafafa;
+    border-radius: 2rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 1rem 2.5rem;
+    transition: background-color 650ms;
+
+}
+.button-blue:hover{
+    background-color: #ee507f;
+}
+
+
+/* our stories */
+.title-headings{
+    text-align: center;
+    margin-bottom: 10rem;
+    color: rgba(0,0,0,.7);
+    margin-top: 4rem;
+    /* text-transform: uppercase; */
+    /* line-height: 1.8rem; */
+}
+
+.title-headings h1{
+    font-family:'Aldrich' 'sans-serif';
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+    
+}
+
+.title-headings h3{
+    font-size: 1.6rem;
+}
+
+.title-headings p{
+    font-size: 1.4rem;
+    /* text-transform: lowercase; */
+}
+
+footer{
+    padding: 2.5rem 0;
+    background-color: #fafafa;
+    text-align: center;
+    color: rgba(0,0,0,0.7);
+    height: 10vh;
+}
+
+/* Media Queries */
+@media screen and (min-width: 350px){
+    .main-message{
+        transform: translateY(40%);
+    }
+}
+
+@media screen and (min-width: 470px){
+    .hero::before{
+        height: 9.4rem;
+    }
+}
+
+@media screen and (min-width: 700px){
+    header{
+        height: 8rem;
+    }
+
+    .nav-brand{
+        width: 3.5rem;
+    }
+
+    .nav-list{
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        /* display: flex; */
+        flex-direction: row;
+        transition: initial;
+    }
+
+    .menu-icons{
+        display: none;
+    }
+
+    .nav-item{
+        margin: 0 2.5rem;
+    }
+
+    .nav-link,
+    .current{
+        color: #fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+
+    .nav-link::before,
+    .current::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: #d65b80;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+
+    .current::before{
+        transform: scaleX(1);
+
+    }
+
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+
+    .hero{
+        height: 90vh;
+    }
+
+    .main-message{
+        transform: translateY(50%);
+    }
+    .tittle-heading h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 666px){
+    .hero{
+        height: 90vh;
+    }
+
+    .main-message{
+        transform: translateY(10%);
+    }
+}
+
+@media screen and (max-width: 666px){
+    .testimonial-approach{
+        display: flex;
+        flex-direction: column;
+        /* height: 80vh; */
+    
+    }
+
+    .paragraph-about .button-blue{
+        margin-top: 1rem;
+    }
+
+    .paragraph-about p{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 1366px){
+    .testimonial-approach{
+        width: 100%;
+    }
+}
